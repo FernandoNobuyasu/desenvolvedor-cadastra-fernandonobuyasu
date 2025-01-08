@@ -6,7 +6,7 @@ Email para contato: fnobuyasu@gmail.com
 - [x] Removi a letra "n" no início do arquivo package.json que impedia a instalação das dependências.
 - [x] Alterei o script start para usar o cross-env diretamente com npx, pois estava dando erro no Windows.
 - [x] Atualizei o gulp para que o browserSync atualize quando qualquer arquivo .scss for modificado, eliminando a necessidade de salvar o arquivo main.scss constantemente para ter feedback instantâneo das alterações.
-- [ ] Criei a estrutura de arquivos sass com base no pattern 7-1.
+- [x] Criei a estrutura de arquivos sass com base no pattern 7-1.
 - [ ] Implementei o layout seguindo o arquivo Figma utilizando HTML e SASS/CSS.
 - [ ] Implementei o design responsivo para tablets e celulares seguindo o layout do Figma.
 - [ ] Adicionei a função de Filtrar produtos por cor, tamanho e preço utilizando Typescript.

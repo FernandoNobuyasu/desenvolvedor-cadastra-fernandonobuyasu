@@ -1,0 +1,7 @@
+@use 'abstracts' as *;
+
+header{
+    display: flex;
+    justify-content: space-between;
+    color: $color-primary;
+}
