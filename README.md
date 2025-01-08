@@ -1,5 +1,19 @@
-# Venha ser um desenvolvedor da Cadastra
+# Teste técnico da Cadastra para Front End Developer
 
+Email para contato: fnobuyasu@gmail.com
+
+## Detalhes sobre a implementação
+- [x] Removi a letra "n" no início do arquivo package.json que impedia a instalação das dependências.
+- [x] Alterei o script start para usar o cross-env diretamente com npx, pois estava dando erro no Windows.
+- [x] Atualizei o gulp para que o browserSync atualize quando qualquer arquivo .scss for modificado, eliminando a necessidade de salvar o arquivo main.scss constantemente para ter feedback instantâneo das alterações.
+- [ ] Criei a estrutura de arquivos sass com base no pattern 7-1.
+- [ ] Implementei o layout seguindo o arquivo Figma utilizando HTML e SASS/CSS.
+- [ ] Implementei o design responsivo para tablets e celulares seguindo o layout do Figma.
+- [ ] Adicionei a função de Filtrar produtos por cor, tamanho e preço utilizando Typescript.
+- [ ] Adicionei a função de Adicionar produto ao carrinho utilizando Typescript.
+- [ ] Adicionei a função de Carregar mais produtos utilizando Typescript.
+
+## Venha ser um desenvolvedor da Cadastra
 Olá! Somos a Cadastra, uma Next-Gen Company que oferece soluções globais em marketing, tecnologia, estratégia de negócios, commerce, dados e analytics. Este desafio é voltado para o nosso Centro de Excelência (COE) de Commerce, especializado em implantação, migração, evolução e otimização de e-commerce.  Contamos com escritórios em 5 países, mas num formato de trabalho 100% home office.
 
 Estamos em busca de Pessoas Desenvolvedoras `Front-end`, com sólidos conhecimentos em HTML, CSS e TS para projetar interfaces e entregar a melhor experiência para os consumidores visando sempre a otimização do código e agilidade no desenvolvimento.
