@@ -1,5 +1,6 @@
 # Teste técnico da Cadastra para Front End Developer
 
+Desenvolvido por: Fernando Nobuyasu
 Email para contato: fnobuyasu@gmail.com
 
 ## Detalhes sobre a implementação
