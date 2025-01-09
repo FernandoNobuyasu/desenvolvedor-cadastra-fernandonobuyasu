@@ -1,18 +1,341 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desenvolvedor Cadastra - Fernando Nobuyasu</title>
+    <meta
+      name="description"
+      content="Catálogo de produtos com carrinho de compras - Teste Cadastra"
+    />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Desenvolvedor Cadastra - Fernando Nobuyasu</title>
-  <link rel="stylesheet" href="main.css" />
-</head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <a class="logo" href="/" aria-label="Ir para página inicial">
+          <img src="/img/logo-cadastra.png" alt="Logo Cadastra" />
+        </a>
+        <section class="cart">
+          <button type="button" class="cart__button js-drawer-button" data-drawer="cart">
+            <img src="/img/icons/bag.png" alt="Ícone do carrinho" />
+            <span class="cart__count">1</span>
+          </button>
+          <div class="cart-drawer drawer" id="cart-drawer">
+            <div class="drawer__header">
+              <h2>Seu carrinho</h2>
+              <button type="button" class="drawer__close js-drawer-button" data-drawer="cart">X</button>
+            </div>
+            <div class="drawer__body">
+              <ul class="cart__list">
+                <li class="cart__item">
+                  <img src="/img/img_2.png" alt="Blusa Azul" />
+                  <div class="cart__item-info">
+                    <h3>Blusa Azul</h3>
+                    <p>R$ 99,90</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </header>
+    <div class="catalog container">
+      <section class="toolbox">
+        <h1>Blusas</h1>
+        <div class="toolbox__buttons desktop-hidden">
+          <button type="button" class="sort__button js-drawer-button" data-drawer="sort">Ordenar</button>
+          <button type="button" class="filter__button js-drawer-button" data-drawer="filter">Filtrar</button>
+        </div>
+        <div class="sort drawer" id="sort-drawer">
+          <div class="sort__header mobile-hidden">
+            <h2>Ordenar por:</h2>
+          </div>
+          <div class="drawer__header desktop-hidden">
+            <h2>Ordernar</h2>
+            <button type="button" class="drawer__close js-drawer-button" data-drawer="sort">X</button>
+          </div>
+          <ul class="sort__list">
+            <li>
+              <button type="button" class="sort__button" value="new">Mais recente</button>
+            </li>
+            <li>
+              <button type="button" class="sort__button" value="high-price">
+                Maior preço
+              </button>
+            </li>
+            <li>
+              <button type="button" class="sort__button" value="low-price">
+                Menor preço
+              </button>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <main>
+        <aside class="filter drawer" id="filter-drawer">
+          <div class="drawer__header desktop-hidden">
+            <h2>Ordernar</h2>
+            <button type="button" class="drawer__close js-drawer-button" data-drawer="sort">X</button>
+          </div>
+          <div class="filter__section">
+            <h2 class="filter__title">CORES</h2>
+            <ul class="filter__list">
+              <li class="filter__item">
+                <input
+                  type="checkbox"
+                  id="filter-color-yellow"
+                  name="filter_color"
+                  value="amarelo"
+                />
+                <label class="filter__name" for="filter-color-yellow"
+                  >Amarelo</label
+                >
+              </li>
+              <li class="filter__item">
+                <input
+                  type="checkbox"
+                  id="filter-color-azul"
+                  name="filter_color"
+                  value="azul"
+                />
+                <label class="filter__name" for="filter-color-azul">Azul</label>
+              </li>
+              <li class="filter__item">
+                <input
+                  type="checkbox"
+                  id="filter-color-branco"
+                  name="filter_color"
+                  value="branco"
+                />
+                <label class="filter__name" for="filter-color-branco"
+                  >Branco</label
+                >
+              </li>
+              <li class="filter__item">
+                <input
+                  type="checkbox"
+                  id="filter-color-cinza"
+                  name="filter_color"
+                  value="cinza"
+                />
+                <label class="filter__name" for="filter-color-cinza"
+                  >Cinza</label
+                >
+              </li>
+              <li class="filter__item">
+                <input
+                  type="checkbox"
+                  id="filter-color-laranja"
+                  name="filter_color"
+                  value="laranja"
+                />
+                <label class="filter__name" for="filter-color-laranja"
+                  >Laranja</label
+                >
+              </li>
+            </ul>
+            <button class="show-all">
+              <span>Ver todas as cores</span>
+              <img src="img/icons/arrow.svg" alt="Seta para baixo" />
+            </button>
+          </div>
+          <div class="filter__section">
+            <h2 class="filter__title">TAMANHOS</h2>
+            <ul class="filter__grid">
+              <li class="filter__item--square">
+                <input
+                  type="checkbox"
+                  id="filter-size-p"
+                  name="filter_color"
+                  value="p"
+                />
+                <label class="filter__name" for="filter-size-p">P</label>
+              </li>
+              <li class="filter__item--square">
+                <input
+                  type="checkbox"
+                  id="filter-size-m"
+                  name="filter_color"
+                  value="m"
+                />
+                <label class="filter__name" for="filter-size-m">M</label>
+              </li>
+              <li class="filter__item--square">
+                <input
+                  type="checkbox"
+                  id="filter-size-g"
+                  name="filter_color"
+                  value="g"
+                />
+                <label class="filter__name" for="filter-size-g">G</label>
+              </li>
+              <li class="filter__item--square">
+                <input
+                  type="checkbox"
+                  id="filter-size-gg"
+                  name="filter_color"
+                  value="gg"
+                />
+                <label class="filter__name" for="filter-size-gg">GG</label>
+              </li>
+              <li class="filter__item--square">
+                <input
+                  type="checkbox"
+                  id="filter-size-u"
+                  name="filter_color"
+                  value="u"
+                />
+                <label class="filter__name" for="filter-size-u">U</label>
+              </li>
+              <li class="filter__item--square">
+                <input
+                  type="checkbox"
+                  id="filter-size-36"
+                  name="filter_color"
+                  value="36"
+                />
+                <label class="filter__name" for="filter-size-36">36</label>
+              </li>
+            </ul>
+          </div>
+          <div class="filter__section">
+            <h2 class="filter__title">FAIXA DE PREÇO</h2>
+            <ul class="filter__list">
+              <li class="filter__item">
+                <input
+                  type="checkbox"
+                  id="filter-price-0-50"
+                  name="filter_color"
+                  value="0-50"
+                />
+                <label class="filter__name" for="filter-price-0-50"
+                  >de R$0 até R$50</label
+                >
+              </li>
+              <li class="filter__item">
+                <input
+                  type="checkbox"
+                  id="filter-price-51-150"
+                  name="filter_color"
+                  value="51-150"
+                />
+                <label class="filter__name" for="filter-price-51-150"
+                  >de R$51 até R$150</label
+                >
+              </li>
+              <li class="filter__item">
+                <input
+                  type="checkbox"
+                  id="filter-price-151-300"
+                  name="filter_color"
+                  value="151-300"
+                />
+                <label class="filter__name" for="filter-price-151-300"
+                  >de R$151 até R$300</label
+                >
+              </li>
+              <li class="filter__item">
+                <input
+                  type="checkbox"
+                  id="filter-price-301-500"
+                  name="filter_color"
+                  value="301-500"
+                />
+                <label class="filter__name" for="filter-price-301-500"
+                  >de R$301 até R$500</label
+                >
+              </li>
+              <li class="filter__item">
+                <input
+                  type="checkbox"
+                  id="filter-price-500+"
+                  name="filter_color"
+                  value="500+"
+                />
+                <label class="filter__name" for="filter-price-500+"
+                  >a partir de R$ 500</label
+                >
+              </li>
+            </ul>
+          </div>
+        </aside>
+        <section class="products">
+          <ul class="products__list">
+            <li class="product">
+              <img src="/img/img_2.png" alt="Blusa Amarela" />
+              <div class="product__info">
+                <h3 class="product__title">Blusa Amarela</h3>
+                <p class="product__price">R$ 28,00</p>
+                <p class="product__installments">até 3x de R$9,33</p>
+                <button type="button" class="product__cta">
+                  COMPRAR
+                </button>
+              </div>
+            </li>
+            <li class="product">
+              <img src="/img/img_2.png" alt="Blusa Amarela" />
+              <div class="product__info">
+                <h3 class="product__title">Blusa Amarela</h3>
+                <p class="product__price">R$ 28,00</p>
+                <p class="product__installments">até 3x de R$9,33</p>
+                <button type="button" class="product__cta">
+                  COMPRAR
+                </button>
+              </div>
+            </li>
+            <li class="product">
+              <img src="/img/img_2.png" alt="Blusa Amarela" />
+              <div class="product__info">
+                <h3 class="product__title">Blusa Amarela</h3>
+                <p class="product__price">R$ 28,00</p>
+                <p class="product__installments">até 3x de R$9,33</p>
+                <button type="button" class="product__cta">
+                  COMPRAR
+                </button>
+              </div>
+            </li>
+            <li class="product">
+              <img src="/img/img_2.png" alt="Blusa Amarela" />
+              <div class="product__info">
+                <h3 class="product__title">Blusa Amarela</h3>
+                <p class="product__price">R$ 28,00</p>
+                <p class="product__installments">até 3x de R$9,33</p>
+                <button type="button" class="product__cta">
+                  COMPRAR
+                </button>
+              </div>
+            </li>
+            <li class="product">
+              <img src="/img/img_2.png" alt="Blusa Amarela" />
+              <div class="product__info">
+                <h3 class="product__title">Blusa Amarela</h3>
+                <p class="product__price">R$ 28,00</p>
+                <p class="product__installments">até 3x de R$9,33</p>
+                <button type="button" class="product__cta">
+                  COMPRAR
+                </button>
+              </div>
+            </li>
+          </ul>
+          <button type="button" class="load-more">Carregar mais</button>
+        </section>
+      </main>
+    </div>
+    <footer class="footer">
+      <p>CADASTRA: IMPLANTAÇÃO DE E-COMMERCE VTEX</p>
+    </footer>
 
-<body>
-  <h1>Desafio Cadastra</h1>
-</body>
-
-<script src="bundle.js"></script>
-
+    <script src="bundle.js"></script>
+  </body>
 </html>
