@@ -1,0 +1,42 @@
+@use 'abstracts' as *;
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  max-width: 375px;
+  z-index: 1;
+  background-color: $color-white;
+  transition: 0.5s;
+  padding-top: 60px;
+  transform: translateX(100%);
+  transition: $transition;
+  &.is-open{
+    transform: translateX(0);
+  }
+}
+
+body{
+  &::before{
+      content: '';
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba($color-gray-dark, 0.5);
+      opacity: 0;
+      visibility: hidden;
+      transition: $transition;
+  }
+  
+  &.drawer-open{
+    &::before{
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}

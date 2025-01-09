@@ -1,0 +1,19 @@
+@use 'abstracts' as *;
+
+.container {
+    max-width: 1200px;
+    margin-inline: auto;
+    padding-inline: 20px;
+}
+
+.mobile-hidden {
+    @include breakpoint(991px) {
+        display: none !important;
+    }
+}
+
+.desktop-hidden {
+    @include lg {
+        display: none !important;
+    }
+}

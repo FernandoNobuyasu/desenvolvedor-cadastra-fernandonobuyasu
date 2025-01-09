@@ -1,7 +1,15 @@
 @use 'abstracts' as *;
 
-header{
-    display: flex;
-    justify-content: space-between;
-    color: $color-primary;
+.header{
+    position: sticky;
+    top: 0;
+    border-bottom: 2px solid #C7C7C7;
+    margin-bottom: 40px;
+    background: $color-white;
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        color: $color-primary;
+        padding-block: 20px;
+    }
 }
