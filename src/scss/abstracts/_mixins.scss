@@ -1,40 +1,41 @@
 @use "sass:map";
 
 @use 'variables' as *;
+@use 'colors' as *;
 
 @mixin xs {
-  @media only screen and (min-width: map.get($breakpoints, "xs")) {
+  @media only screen and (width >= map.get($breakpoints, "xs")) {
     @content;
   }
 }
 @mixin sm {
-  @media only screen and (min-width: map.get($breakpoints, "sm")) {
+  @media only screen and (width >= map.get($breakpoints, "sm")) {
     @content;
   }
 }
 @mixin md {
-  @media only screen and (min-width: map.get($breakpoints, "md")) {
+  @media only screen and (width >= map.get($breakpoints, "md")) {
     @content;
   }
 }
 @mixin lg {
-  @media only screen and (min-width: map.get($breakpoints, "lg")) {
+  @media only screen and (width >= map.get($breakpoints, "lg")) {
     @content;
   }
 }
 @mixin xl {
-  @media only screen and (min-width: map.get($breakpoints, "xl")) {
+  @media only screen and (width >= map.get($breakpoints, "xl")) {
     @content;
   }
 }
 @mixin xxl {
-  @media only screen and (min-width: map.get($breakpoints, "xxl")) {
+  @media only screen and (width >= map.get($breakpoints, "xxl")) {
     @content;
   }
 }
 
-@mixin breakpoint($bp: 0) {
-  @media (max-width: $bp) {
+@mixin mobile {
+  @media only screen and (width < map.get($breakpoints, "lg")) {
     @content;
   }
 }

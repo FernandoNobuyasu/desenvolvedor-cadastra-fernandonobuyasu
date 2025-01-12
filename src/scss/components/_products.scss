@@ -1,0 +1,42 @@
+@use "abstracts" as *;
+
+.products {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    @include sm {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include lg {
+      display: flex;
+      justify-content: center;
+      gap: 42px 64px;
+      flex-wrap: wrap;
+      max-width: 800px;
+      margin-inline: auto;
+      margin-bottom: 70px;
+    }
+  }
+  &__button {
+    display: block;
+    margin-inline: auto;
+    padding: 8px 30px;
+    background-color: $color-primary;
+    color: $color-white;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    transition: $transition;
+    margin-top: 40px;
+    @include lg {
+      margin-bottom: 70px;
+    }
+    &:hover {
+      background-color: $color-black;
+    }
+    &.is-hidden{
+      display: none;
+    }
+  }
+}

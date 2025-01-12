@@ -1,0 +1,54 @@
+@use "abstracts" as *;
+
+.product {
+  &__image {
+    margin-bottom: 8px;
+    @include lg{
+      margin-bottom: 10px;
+    }
+    img{
+        display: block;
+        margin-inline: auto;
+        max-width: 100%;
+        height: auto;
+    }
+  }
+  &__name {
+    margin-bottom: 8px;
+    text-align: center;
+    text-transform: uppercase;
+    @include lg{
+      margin-bottom: 10px;
+    }
+  }
+  &__price {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3px;
+    @include lg{
+      margin-bottom: 5px;
+    }
+  }
+  &__installment {
+    text-align: center;
+    color: $color-gray-dark;
+    margin-bottom: 12px;
+    @include lg{
+      margin-bottom: 14px;
+    }
+  }
+  &__button {
+    display: block;
+    width: 100%;
+    padding: 7px;
+    background-color: $color-black;
+    color: $color-white;
+    text-transform: uppercase;
+    border: none;
+    transition: $transition;
+    &:hover {
+      background-color: $color-primary;
+    }
+  }
+}

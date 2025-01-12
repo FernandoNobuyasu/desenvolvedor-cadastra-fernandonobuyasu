@@ -1,42 +1,68 @@
-@use 'abstracts' as *;
+@use "abstracts" as *;
 
-.drawer {
+@mixin drawer {
   position: fixed;
   top: 0;
+  bottom: 0;
   right: 0;
-  height: 100%;
+  z-index: 2;
   width: 100%;
   max-width: 375px;
-  z-index: 1;
-  background-color: $color-white;
-  transition: 0.5s;
-  padding-top: 60px;
-  transform: translateX(100%);
+  background: $color-white;
   transition: $transition;
-  &.is-open{
+  transform: translateX(100%);
+}
+
+.drawer {
+  $r: &;
+  &--persistent {
+    display: flex;
+    flex-direction: column;
+    @include drawer;
+  }
+  &--mobile {
+    @include mobile {
+      @include drawer;
+    }
+  }
+  &.active {
     transform: translateX(0);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid $color-gray-dark;
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    color: $color-gray-dark;
+    @include mobile{
+      margin-bottom: 15px;
+    }
+  }
+  &__close {
+    background: $color-white;
+    border: none;
+  }
+  &__body {
+    flex: 1;
+    overflow: auto;
   }
 }
 
-body{
-  &::before{
-      content: '';
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background-color: rgba($color-gray-dark, 0.5);
-      opacity: 0;
-      visibility: hidden;
-      transition: $transition;
-  }
-  
-  &.drawer-open{
-    &::before{
-      opacity: 1;
-      visibility: visible;
-    }
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background-color: rgba($color-gray-dark, 0.5);
+  transition: $transition;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  &.active {
+    opacity: 1;
+    visibility: visible;
   }
 }

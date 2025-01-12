@@ -3,11 +3,11 @@
 .container {
     max-width: 1200px;
     margin-inline: auto;
-    padding-inline: 20px;
+    padding-inline: 15px;
 }
 
 .mobile-hidden {
-    @include breakpoint(991px) {
+    @include mobile {
         display: none !important;
     }
 }
