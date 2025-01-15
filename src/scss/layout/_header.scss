@@ -1,21 +1,21 @@
-@use 'abstracts' as *;
+@use "abstracts" as *;
 
-.header{
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    border-bottom: 2px solid #C7C7C7;
-    margin-bottom: 24px;
-    background: $color-white;
-    @include lg{
-        margin-bottom: 40px;
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: 2px solid #c7c7c7;
+  margin-bottom: 24px;
+  background: $color-white;
+  @include lg {
+    margin-bottom: 40px;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 20px;
+    @include mobile {
+      padding-inline: 35px 25px;
     }
-    &__container{
-        display: flex;
-        justify-content: space-between;
-        padding-block: 20px;
-        @include mobile{
-            padding-inline: 35px 25px;
-        }
-    }
+  }
 }

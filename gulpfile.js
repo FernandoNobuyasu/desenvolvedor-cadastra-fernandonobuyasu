@@ -7,6 +7,7 @@ const autoprefixer = require("gulp-autoprefixer");
 const sass = require("gulp-sass")(require("sass"));
 const sourcemaps = require("gulp-sourcemaps");
 const browserSync = require("browser-sync").create();
+const imagemin = require("gulp-imagemin"); //Importa gulp-imagemin
 
 const webpackConfig = require("./webpack.config.js");
 
@@ -83,8 +84,18 @@ function html() {
   return src(paths.html.src).pipe(browserSync.stream()).pipe(dest(paths.dest));
 }
 
+// Função para otimizar imagens
 function img() {
-  return src(paths.img.src).pipe(dest(paths.dest + "/img"));
+  return src(paths.img.src)
+    .pipe(imagemin([   // Adicionando o gulp-imagemin para otimizar as imagens
+      imagemin.gifsicle({ interlaced: true }),
+      imagemin.mozjpeg({ quality: 75, progressive: true }),
+      imagemin.optipng({ optimizationLevel: 5 }),
+      imagemin.svgo({
+        plugins: [{ removeViewBox: true }, { cleanupIDs: false }],
+      }), // Configurações do exemplo da documentação
+    ]))
+    .pipe(dest(paths.dest + "/img"));
 }
 
 const build = series(clean, parallel(styles, scripts, html, img));
@@ -106,4 +117,5 @@ exports.build = build;
 exports.server = server;
 exports.styles = styles;
 exports.scripts = scripts;
+exports.img = img; // Exportando a função de otimização de imagens
 exports.default = dev;

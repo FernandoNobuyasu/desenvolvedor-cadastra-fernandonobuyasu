@@ -1,12 +1,12 @@
-@use 'abstracts' as *;
+@use "abstracts" as *;
 
-.footer{
-    background: $color-black;
-    color: $color-white;
-    padding: 7px;
-    text-align: center;
-    margin-top: 40px;
-    @include lg{
-        margin-top: 35px;
-    }
+.footer {
+  background: $color-black;
+  color: $color-white;
+  padding: 7px;
+  text-align: center;
+  margin-top: 40px;
+  @include lg {
+    margin-top: 35px;
+  }
 }

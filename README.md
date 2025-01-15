@@ -8,11 +8,18 @@ Email para contato: fnobuyasu@gmail.com
 - [x] Alterei o script start para usar o cross-env diretamente com npx, pois estava dando erro no Windows.
 - [x] Atualizei o gulp para que o browserSync atualize quando qualquer arquivo .scss for modificado, eliminando a necessidade de salvar o arquivo main.scss constantemente para ter feedback instantâneo das alterações.
 - [x] Criei a estrutura de arquivos sass com base no pattern 7-1.
-- [ ] Implementei o layout seguindo o arquivo Figma utilizando HTML e SASS/CSS.
-- [ ] Implementei o design responsivo para tablets e celulares seguindo o layout do Figma.
-- [ ] Adicionei a função de Filtrar produtos por cor, tamanho e preço utilizando Typescript.
-- [ ] Adicionei a função de Adicionar produto ao carrinho utilizando Typescript.
-- [ ] Adicionei a função de Carregar mais produtos utilizando Typescript.
+- [x] Implementei o layout seguindo o arquivo Figma utilizando HTML e SASS/CSS.
+- [x] Implementei o design responsivo para tablets e celulares seguindo o layout do Figma.
+- [x] Adicionei a função de Filtrar produtos por cor, tamanho e preço utilizando Typescript.
+- [x] Adicionei a função de Adicionar produto ao carrinho utilizando Typescript.
+- [x] Adicionei a função de Carregar mais produtos utilizando Typescript.
+- [x] Revisei o código visando o clean code.
+- [x] Adicionei de processo no gulp para otimizar imagens utilizando gulp-imagemin. Ex: img_2 diminuiu de 71,2kb para 62,8kb.
+
+## Como rodar o projeto
+Executar o comando: npm install
+Executar o comando: npm start 
+Página poderá ser acessada pela url: http://localhost:3000
 
 ## Venha ser um desenvolvedor da Cadastra
 Olá! Somos a Cadastra, uma Next-Gen Company que oferece soluções globais em marketing, tecnologia, estratégia de negócios, commerce, dados e analytics. Este desafio é voltado para o nosso Centro de Excelência (COE) de Commerce, especializado em implantação, migração, evolução e otimização de e-commerce.  Contamos com escritórios em 5 países, mas num formato de trabalho 100% home office.

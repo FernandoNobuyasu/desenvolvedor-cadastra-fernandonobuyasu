@@ -1,19 +1,23 @@
-@use 'abstracts' as *;
+@use "abstracts" as *;
 
 .container {
-    max-width: 1200px;
-    margin-inline: auto;
-    padding-inline: 15px;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 15px;
+}
+
+.hidden {
+  display: none !important;
 }
 
 .mobile-hidden {
-    @include mobile {
-        display: none !important;
-    }
+  @include mobile {
+    display: none !important;
+  }
 }
 
 .desktop-hidden {
-    @include lg {
-        display: none !important;
-    }
+  @include lg {
+    display: none !important;
+  }
 }

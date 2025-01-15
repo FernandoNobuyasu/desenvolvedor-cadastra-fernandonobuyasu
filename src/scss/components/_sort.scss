@@ -26,10 +26,10 @@
     width: 100%;
     transition: $transition;
     @include lg {
-        &:hover {
+      &:hover {
         background: $color-primary;
         color: $color-white;
-        }
+      }
     }
   }
   &__list {
